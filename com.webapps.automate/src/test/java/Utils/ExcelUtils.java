@@ -1,3 +1,15 @@
+/*
+ * 
+ * Author: Mayur Kumar
+ * Emp Id: MA20081559
+ * Last Modified: 08/06/2020
+ * 
+ * Topic: Topgear Selenium Hands-on
+ * 
+ * Features used: Selenium, Data driven(Excel), Maven-TestNG framework
+ * 
+ */
+
 package Utils;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -15,7 +27,7 @@ public class ExcelUtils {
 
 	public ExcelUtils(String excelPath, String sheetName) {
 
-		//projectPath = System.getProperty("user.dir");
+		// projectPath = System.getProperty("user.dir");
 		try {
 			workbook = new XSSFWorkbook(excelPath);
 			sheet = workbook.getSheet(sheetName);
@@ -47,7 +59,7 @@ public class ExcelUtils {
 
 		cellDataNum = (long) sheet.getRow(rowNum).getCell(colNum).getNumericCellValue();
 		System.out.println(cellDataNum);
-		String s=String.valueOf(cellDataNum); 
+		String s = String.valueOf(cellDataNum);
 		System.out.println(s);
 		return s;
 	}
